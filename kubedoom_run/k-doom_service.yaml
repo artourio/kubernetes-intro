@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kdoom-service
+  labels:
+    app: kdoom
+spec:
+  ports:
+  - port: 5900
+    targetPort: 5900
+  selector:
+    app: kdoom
+  type: LoadBalancer
+
